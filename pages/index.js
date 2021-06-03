@@ -1,16 +1,16 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import Footer from '../components/Footer'
-import Navbar from '../components/Navbar'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
   return (
     <div>
-      <h1>homepage</h1>
+      <h1 className={styles.title}>Homepage</h1>
+      <p className={styles.text}>Fugiat eiusmod Lorem et et est aliquip ut excepteur. Nostrud est cillum et dolor officia. Qui sint est irure nostrud velit Lorem minim officia do magna est.</p>
+      <p className={styles.text}>Fugiat eiusmod Lorem et et est aliquip ut excepteur. Nostrud est cillum et dolor officia. Qui sint est irure nostrud velit Lorem minim officia do magna est.</p>
       <Link href="/ninjas">
-        <a>See Listing</a>
+        <a className={styles.btn}>See Listing</a>
       </Link>
     </div>
   )
