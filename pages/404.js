@@ -7,15 +7,9 @@ const NotFound404 = () => {
   const [counter, setCounter] = useState(5)
 
   useEffect(() => {
-    setTimeout(() => {
-      // router.go(-1)
-      router.push('/')
-    }, 5000);
-  }, [])
-
-  useEffect(() => {
     const countdown = () => {
-      setCounter(counter - 1)
+      if (counter >= 1) setCounter(counter - 1)
+      else router.push('/')
     }
     const interval = setInterval(countdown, 1000);
     return () => clearInterval(interval)
