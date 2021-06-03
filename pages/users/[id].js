@@ -15,16 +15,31 @@ export const getStaticPaths = async () => {
   }
 }
 
-const UserPage = ({ paths }) => {
+export const getStaticProps = async (context) => {
+  const id = context.params.id
+  const response = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
+  const data = await response.json()
+
+  return {
+    props: {
+      user: data
+    }
+  }
+}
+
+const UserPage = ({ user }) => {
   return (
     <>
       <Head>
-        <title>Nextjs | User Page</title>
-        <meta name="keywords" content="user"></meta>
+        <title>Nextjs | {user.name}</title>
+        <meta name="keywords" content="users"></meta>
       </Head>
-      <div>
-        <h1>Details Page</h1>
-      </div>
+    <div>
+      <h3>{user.name}</h3>
+      <p>{user.email}</p>
+      <p>{user.website}</p>
+      <p>{user.address.city}</p>
+    </div>
     </>
   );
 }
