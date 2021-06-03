@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Nextjs Tutorial</title>
+        <title>Nextjs | Home</title>
         <meta name="keywords" content="nextjs"></meta>
       </Head>
       <div>

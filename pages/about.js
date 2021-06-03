@@ -4,7 +4,7 @@ const About = () => {
   return (
     <>
       <Head>
-        <title>About</title>
+        <title>Nextjs | About</title>
         <meta name="keywords" content="about"></meta>
       </Head>
       <div>
