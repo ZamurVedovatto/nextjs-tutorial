@@ -4,8 +4,13 @@
   display: block;
   margin: 20px 10px;
   border-left: 8px solid #fff;
+  transition: .25s ease-in-out;
 }
 
-.sigle:hover {
+.single:hover {
   border-left: 8px solid #4979ff;
+}
+
+.single:hover p {
+  font-weight: bold;
 }
